@@ -1,15 +1,17 @@
-# On-Chip-Wireless
+# gem5-X + On-Chip-Wireless
 
-On-chip wireless communication is a novel interconnection method enabled by interfacing a transceiver and a nano-antenna to the components of a system. Gem5-X supports the modelling of this interconnect strategy. In this manner, the behaviour a wireless link with different latencies, bandwidths, and Medium Access Control (MAC) protocols can be explored.
+Gem5-X-On_Chip-Wireless supports the modelling of systems featuring interconnections enabled by on-chip transceivers and a nano-antennae. The behaviour a wireless link with different latencies, bandwidths, and Medium Access Control (MAC) protocols can be emulated.
 
 The features of the modeled on-chip wireless interconnect and an exploration of its parameters is described in the following paper:
 >R. Medina, J. Klein, G. Ansaloni, M. Zapater, S. Abadal, E. Alarcón, D. Atienza.
 >"[**System-Level Exploration of In-Package Wireless Communication for Multi-Chiplet Platforms**](https://infoscience.epfl.ch/record/298245?&ln=en)".
 >In _ASPDAC '23_.
 
-## Installing gem5-X
+## 
 
-You can follow Section 2 of [this document](https://www.epfl.ch/labs/esl/wp-content/uploads/2021/08/gem5_X_TechnicalManual_v2.pdf) to install gem5-X.
+## Installing gem5-X-On-Chip-Wireless
+
+Please carefully follow the instructions provided in Section 2 of the technical manual enclosed in this repository to installm gem5-X-On-Chip-Wireless and the necessary dependencies. 
 
 ## Compiling benckmarks
 
