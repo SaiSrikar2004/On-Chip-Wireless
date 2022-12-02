@@ -665,8 +665,8 @@ class WirelessXBar : public BaseXBar
     uint16_t tokenID;
     /** Stores the offset for obtaining the token ID of slave ports */
     uint16_t idOffset;
-    /** Stores the number of tokens (ports) that transmit */
-    uint16_t numTokens;
+    /** Stores the number of nodes (ports) that transmit */
+    uint16_t numNodes;
 
     /** Track the state of the wireless channel */
     enum ChannelState { IDLE, BUSY };

@@ -53,7 +53,7 @@ WirelessXBar::WirelessXBar(const WirelessXBarParams *p)
       retrySlot(p->bandwidth * p->retry_slot_size),
       backoffCeil(p->backoff_ceil), backoffIndex(0),
       tokenID(0), idOffset(p->port_master_connection_count),
-      numTokens(p->port_master_connection_count+p->port_slave_connection_count),
+      numNodes(p->port_master_connection_count+p->port_slave_connection_count),
       channelState(IDLE), 
       collisionCheckEvent([this]{ expBackoffCollisionCheck(); }, name()),
       tokenChangeEvent([this]{ tokenChange(); }, name())
@@ -1282,7 +1282,7 @@ WirelessXBar::tokenChange()
     channelState = IDLE;
 
     // Advance token holder
-    tokenID = (tokenID + 1) % numTokens;
+    tokenID = (tokenID + 1) % numNodes;
 
     // Schedule next token change in case of silent cycle
     // It's done before sending retries, in case they transmit and reschedule
@@ -1762,7 +1762,7 @@ WirelessXBar::WirelessLayer<SrcType,DstType>::triggerSendRetry(Port* srcPort)
             // Register latency for waiting for token (tx recorded at tryTiming)
             xbar.wirelessLatency[j->masterId] += curTick() - j->tickStart;
             if (curTick() - j->tickStart >
-                                    xbar.cyclesToTicks(Cycles(xbar.numTokens)))
+                                    xbar.cyclesToTicks(Cycles(xbar.numNodes)))
                 xbar.wirelessCollisions[j->masterId]++;
 
             // Remove from pktToTransmitTPList
