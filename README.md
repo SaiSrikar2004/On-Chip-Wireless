@@ -11,7 +11,7 @@ The features of the modeled on-chip wireless interconnect and an exploration of 
 
 ## Installing gem5-X-On-Chip-Wireless
 
-Please carefully follow the instructions provided in Section 2 of the technical manual enclosed in this repository to installm gem5-X-On-Chip-Wireless and the necessary dependencies. 
+Please carefully follow the instructions provided in Section 2 of the [technical manual][https://github.com/gem5-X/On-Chip-Wireless/blob/master/gem5_X_TechnicalManual_Wireless.pdf] enclosed in this repository to install gem5-X-On-Chip-Wireless and the necessary dependencies. 
 
 ## Compiling benckmarks
 
